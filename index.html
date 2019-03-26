@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- <input v-model="message"> -->
+    <button v-on:click="number1">1</button>
+    <button v-on:click="number2">2</button>
+    <button v-on:click="number3">3</button>
+    <button v-on:click="number4">4</button>
+    <button v-on:click="number5">5</button>
+    <button v-on:click="clear">clear</button>
+    <p>{{message}}</p>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: '',
+      } ,
+      methods: {
+        number1 : function() {
+          this.message += 1
+        } ,
+        number2 : function() {
+          this.message += 2
+        } ,
+        number3 : function() {
+          this.message += 3
+        } ,
+        number4 : function() {
+          this.message += 4
+        } ,
+        number5 : function() {
+          this.message += 5
+        } ,
+        clear : function() {
+          this.message = ''
+        }
+      }
+      
+    })
+  </script>
+</body>
+
+</html>
